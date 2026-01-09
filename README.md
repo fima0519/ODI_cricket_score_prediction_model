@@ -2,17 +2,12 @@
 
 A machine learning project that predicts **One Day International (ODI) cricket scores** using historical match data and regression techniques. This project demonstrates data preprocessing, feature engineering, model training, evaluation, and prediction for cricket matches.
 
-## 🔹 Overview
-
-This repository contains a model that predicts the **final score of an ODI inning** based on input features like team performance, overs completed, wickets lost, and historical match data. The model is trained using Python and popular ML libraries.
-
 ## 🛠 Technologies Used
 
 - **Python** – Core programming language  
 - **scikit‑learn / ML libraries** – Machine learning algorithms and preprocessing tools  
 - **Pandas & NumPy** – Data manipulation and analysis  
-- **Jupyter Notebook** – Code exploration and model training environment  
-- **Pickle** (optional) – Save trained model for future use
+- **Jupyter Notebook or Google Colab** – Code exploration and model training environment  
 
 ## 🔹 Overview
 
