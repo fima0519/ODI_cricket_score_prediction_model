@@ -14,22 +14,62 @@ This repository contains a model that predicts the **final score of an ODI innin
 - **Jupyter Notebook** – Code exploration and model training environment  
 - **Pickle** (optional) – Save trained model for future use
 
-## 💡 Features
+## 🔹 Overview
 
-- Loads ODI cricket match dataset (historical match data)  
-- Processes and prepares data (cleaning and feature engineering)  
-- Trains regression model to predict final score  
-- Evaluates model performance with metrics like MAE and R²  
-- Predicts score for new match situations
+This model predicts the score a batting team is likely to achieve **after completing 50 overs**, given the current situation in the innings.  
+
+**Features used for prediction include:**
+
+- Batting team  
+- Bowling team  
+- Current over and ball  
+- Total score and current score  
+- Wickets fallen  
+- Runs scored in the last 5 overs  
+- Balls bowled  
+- Current run rate  
+
+**Note:** The first five overs are excluded from prediction because the total for the first five overs can only be summed after they are completed.
+
+---
 
 ## 📥 Dataset
 
-The dataset for this project is stored externally. Download it before running the notebook or model:
-
+- Historical ODI match data from **2006 to 2019** was collected from sources such as **Kaggle**.  
+- The dataset enables the model to **accurately predict scores for 2018**, and predictions for 2023 generally differ from actual scores by **10–20 runs**.
 👉 **Dataset link:**  
 https://drive.google.com/file/d/1mdZ5pFsARVbR1Q6bCKksV4jnmsBPhZit/view?usp=drive_link :contentReference[oaicite:1]{index=1}
 
 Once downloaded, place the dataset file in the project folder before executing the code.
+
+
+---
+
+## 🧹 Data Cleaning and Processing
+
+1. **Missing data handling** – Removed irrelevant or incomplete values.  
+2. **Feature selection & reduction** – Eliminated redundant or dependent columns.  
+3. **Feature engineering** – Calculated:  
+   - Runs scored in the last 5 overs  
+   - Current run rate  
+   - Total wickets and balls bowled  
+4. **Train-test split** – Dataset split into training and testing sets for model evaluation.  
+
+---
+
+## 🛠 Methodology / Model Training
+
+The model was trained using multiple machine learning algorithms:
+
+1. **Random Forest Regression**  
+2. **Linear Regression**  
+3. **Decision Tree Regression**  
+4. **Polynomial Regression**  
+
+The trained models predict the **final score** based on the current match situation.
+
+---
+
 
 ## 🚀 Getting Started
 
